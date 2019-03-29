@@ -24,10 +24,13 @@ export class ContentComponent implements OnInit {
 
   get_info_fn() {
     const state = JSON.parse(localStorage.getItem('call_status')); // достаю из стораджа инфо
+    if (state === null) {
+      return;
+    }
     this.name_method = state.method_name;
     this.called = state.called;
     this.get_info = true;
-    console.log(this.get_info);
+
   }
 
   @logger()
