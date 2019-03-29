@@ -1,5 +1,8 @@
 {
-  "compileOnSave": false,
+  "compileOnSave": {
+    "target": "ES5",
+    "experimentalDecorators": true
+},
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

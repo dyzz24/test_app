@@ -1,0 +1,17 @@
+<div class="content">
+
+  <ul class="all_constants">
+    <li *ngFor="let item of this.constants"
+    [ngClass]="{big_size_txt: item.big_flag}"
+    (click) = 'this.resizer(item)'
+    ><span class="name">name: {{item.name}}</span> <span class="val">value: {{item.value}}</span></li>
+  </ul>
+
+  <button class='clicker' (click) = 'this.clicker()'>Click</button>
+  <button class='clicker' (click) = 'this.get_info_fn()'>Get info</button>
+
+  <div class="result" *ngIf="this.get_info">
+<p class='get_info'>Метод {{this.name_method}}  использовался {{this.called}} раз за последнюю сессию</p>
+</div>
+
+</div>
